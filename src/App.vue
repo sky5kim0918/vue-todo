@@ -22,15 +22,14 @@ export default {
   data() {
     return {
       todoItems: []
-    };
+    }; 
   },
   methods: {
     addOneItem(todoItem) {
       var value = {
         item: todoItem,
         date: `${getDate().date} ${getDate().week}`,
-        time: getDate().time,
-        completed: false
+        time: getDate().time
       };
       localStorage.setItem(todoItem, JSON.stringify(value));
       this.todoItems.push(value);
